@@ -12,7 +12,7 @@
   <!-- MODELS -->
   <script src="models/Task.js"></script>
   <script src="models/List.js"></script>
-  <!--   <script src=" models/App.js"></script> -->
+  <script src=" models/App.js"></script>
 
   <!-- COLLECTIONS -->
   <script src="collections/AppLists.js"></script>
@@ -25,27 +25,38 @@
 
   <script>
   $(document).ready(function() {
-    var app = new AppView();
-    $('body').append(app.render());
+    var appModel = new App();
+    var appView = new AppView({model: appModel});
+    $('body').append(appView.render());
   });
   </script>
 </head>
 <body>
+
+</body>
+
+<!-- TEMPLATES -->
+<!-- <script id="top-navbar-template" type="text/x-handlebars-template">
 <nav>
   <div id="left-icon">
     <h1>TODO</h1>
   </div>
 </nav>
-</body>
+</script> -->
 
-<!-- TEMPLATES -->
+
 <script id="sidebar-template" type="text/x-handlebars-template">
   <div id="sidebar-container">
+    <div id="sidebar-title">
+      <h1>TODO</h1>
+    </div>
     <div id="sidebar-list-container">
+      <p id="sidebar-list-header">LISTS</p>
       <p class="sidebar-list">Homework</p>
       <p class="sidebar-list">Other</p>
       <p class="sidebar-list">Something Else</p>
     </div>
+    <p id="sidebar-new-list">NEW LIST</p>
   </div>
 </script>
 </html>

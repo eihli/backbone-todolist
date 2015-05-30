@@ -4,27 +4,16 @@
   margin: 0px;
 }
 
+html, body{
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
 body {
   background-color: #FFFFFF;
 }
 
-nav{
-  width: 100%;
-  height: 50px;
-  background-color: #2a2d33;
-}
 
-#left-icon {
-  width: 200px;
-}
-
-#left-icon h1 {
-  color: white;
-  font-size: 30px;
-  text-align: center;
-  line-height: 50px;
-
-}
 
 
 /*SIDE BAR*/
@@ -35,19 +24,29 @@ nav{
   position: fixed;
   height: 100%;
   width: 200px;
-  padding-top: 20px;
 }
 
-#sidebar-header {
-  font-weight: 500;
+#sidebar-title {
+  width: 200px;
+  background-color: #2a2d33;
+  margin-bottom: 20px;
+}
+
+#sidebar-title h1 {
+  color: white;
   font-size: 30px;
   text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  line-height: 50px;
+
 }
 
-#sidebar-list-container {
-/*  background-color: red;*/
+#sidebar-list-header{
+ padding-left: 15px;
+ padding-bottom: 3px;
+ margin-bottom: 10px;
+ border-bottom: 1px solid #ab9ba9;
+   font-weight: 700;
+  font-size: 12px;
 }
 
 .sidebar-list {
@@ -57,5 +56,17 @@ nav{
 
 .sidebar-list:hover {
   background-color: #3d313b;
-  cursor: pointer;d
+  cursor: pointer;
+}
+
+#sidebar-new-list {
+  padding-left: 15px;
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+#sidebar-new-list:hover {
+  cursor: pointer;
+  color: white;
 }
