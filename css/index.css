@@ -7,6 +7,8 @@
 html, body{
   overflow-x: hidden;
   overflow-y: hidden;
+  height: 100%;
+  width: 100%;
 }
 
 body {
@@ -45,8 +47,8 @@ body {
  padding-bottom: 3px;
  margin-bottom: 10px;
  border-bottom: 1px solid #ab9ba9;
-   font-weight: 700;
-  font-size: 12px;
+ font-weight: 700;
+ font-size: 12px;
 }
 
 .sidebar-list {
@@ -69,4 +71,82 @@ body {
 #sidebar-new-list:hover {
   cursor: pointer;
   color: white;
+}
+
+
+
+/*MAIN LIST CONTENT*/
+#list-container {
+  background-color: #FFFFFF;
+  margin-left: 200px;
+  width: calc(100% - 200px);
+  height: 100%;
+}
+
+.list-name {
+  text-align: center;
+  background-color: #4C9689;
+  color: white;
+  line-height: 50px;
+  font-weight: 700;
+}
+
+#new-list-form-container {
+  width: 400px;
+  height: 300px;
+  background-color: #F7F7F7;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  box-shadow: 0 2px 10px rgba(64,54,63,.5);
+  border-radius: 10px;
+}
+
+#new-list-form-container-content{
+  display: inline-block;
+  margin-top: 50px;
+}
+
+
+#new-list-form-title {
+  text-align: center;
+  font-size: 30px;
+  color: #2a2d33;
+}
+
+#new-list-input {
+  width: 350px;
+  height: 50px;
+  margin-left: 25px;
+  margin-top: 20px;
+  background-color: #F7F7F7;
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid rgba(64,54,63,.5);
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 30px;
+  color: #4C9689;
+  text-align: center;
+
+}
+
+#new-list-input:focus {
+  outline: none;
+}
+
+#new-list-submit {
+  margin-left: 100px;
+  margin-top: 30px;
+  width: 200px;
+  height: 60px;
+  background-color: #48a0de;
+  color: white;
+  font-size: 20px;
+  border: none;
+  border-radius: 30px;
+}
+
+#new-list-submit:hover {
+  cursor:pointer;
 }

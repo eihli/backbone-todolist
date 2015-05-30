@@ -18,8 +18,8 @@
   <script src="collections/AppLists.js"></script>
 
   <!-- VIEWS -->
-<!--   <script src="views/TaskView.js"></script>
-  <script src="views/ListView.js"></script> -->
+<!--   <script src="views/TaskView.js"></script> -->
+  <script src="views/ListView.js"></script>
   <script src="views/SideBarView.js"></script>
   <script src="views/AppView.js"></script>
 
@@ -36,13 +36,20 @@
 </body>
 
 <!-- TEMPLATES -->
-<!-- <script id="top-navbar-template" type="text/x-handlebars-template">
-<nav>
-  <div id="left-icon">
-    <h1>TODO</h1>
+<script id="list-template" type="text/x-handlebars-template">
+<div id="list-container">
+  <h1 class="list-name">Welcome to Your To Do List</h1>
+  <div id="new-list-form-container">
+    <div id="new-list-form-container-content">
+      <h3 id="new-list-form-title">Create New List</h3>
+      <form id="new-list-form">
+        <input id="new-list-input" type="text" placeholder="New List"/>
+        <input id="new-list-submit" type="submit" />
+      </form>
+    </div>
   </div>
-</nav>
-</script> -->
+</div>
+</script>
 
 
 <script id="sidebar-template" type="text/x-handlebars-template">

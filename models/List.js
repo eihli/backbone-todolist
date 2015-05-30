@@ -1,6 +1,7 @@
 var List = Backbone.Model.extend({
   defaults: {
     tasks: [],
+    name: "New List"
 
   },
 
