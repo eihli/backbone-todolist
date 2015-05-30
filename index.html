@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Backbone ToDoList</title>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/underscore/underscore.js"></script>
+  <script src="bower_components/backbone/backbone.js"></script>
+
+  <!-- MODELS -->
+
+  <!-- <script src="models/Task.js"></script>
+  <script src="models/List.js"></script>
+  <script src=" models/App.js"></script>-->
+
+  <!-- COLLECTIONS -->
+  <!-- <script src="collections/AppLists.js"></script> -->
+
+  <!-- VIEWS -->
+  <!-- <script src="views/TaskView.js"></script>
+  <script src="views/ListView.js"></script>
+  <script src="views/SideBarView.js"></script> -->
+  <script src="views/AppView.js"></script>
+
+
+  <script>
+  $(document).ready(function() {
+
+    var app = new AppView();
+    $('body').append(app.render());
+  });
+  </script>
+</head>
+<body>
+
+</body>
+</html>
