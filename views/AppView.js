@@ -4,6 +4,10 @@ var AppView = Backbone.View.extend({
   initialize: function(){
     this.sideBarView = new SideBarView({collection: this.model.get('lists')});
     this.mainView = new MainView({model: this.model});
+
+    this.listenTo(this.sideBarView , 'showNewListForm', this.showNewListForm);
+
+
   },
 
   // events: {
@@ -17,8 +21,8 @@ var AppView = Backbone.View.extend({
     ]);
   },
 
-  // testing: function(){
-  //   console.log("APPVIEW CLICK");
-  // }
+  showNewListForm: function(){
+    this.mainView.trigger('showNewListForm', this);
+  }
 
 });

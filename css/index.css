@@ -16,6 +16,20 @@ body {
   background-color: #FFFFFF;
 }
 
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+}
+
 
 
 
@@ -76,17 +90,11 @@ body {
 
 
 
-/*MAIN LIST CONTENT*/
+/*MAIN CONTENT*/
 .main-container {
   background-color: #FFFFFF;
   margin-left: 200px;
   width: calc(100% - 200px);
-  height: 100%;
-}
-
-.list-container {
-  background-color: #FFFFFF;
-  width: 100%;
   height: 100%;
 }
 
@@ -98,7 +106,9 @@ body {
   font-weight: 700;
 }
 
-#new-list-form-container {
+
+/*CREATE LIST CONTAINER*/
+#create-list-form-container {
   width: 400px;
   height: 300px;
   background-color: #F7F7F7;
@@ -109,19 +119,19 @@ body {
   border-radius: 10px;
 }
 
-#new-list-form-container-content{
+#create-list-form-container-content{
   display: inline-block;
   margin-top: 50px;
 }
 
 
-#new-list-form-title {
+#create-list-form-title {
   text-align: center;
   font-size: 30px;
   color: #2a2d33;
 }
 
-#new-list-input {
+#create-list-input {
   width: 350px;
   height: 50px;
   margin-left: 25px;
@@ -138,11 +148,11 @@ body {
   outline:0;
 }
 
-#new-list-input:focus {
+#create-list-input:focus {
   outline:0;
 }
 
-#new-list-submit {
+#create-list-submit {
   margin-left: 100px;
   margin-top: 30px;
   width: 200px;
@@ -154,6 +164,6 @@ body {
   border-radius: 30px;
 }
 
-#new-list-submit:hover {
+#create-list-submit:hover {
   outline: none;
 }

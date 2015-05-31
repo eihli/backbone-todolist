@@ -11,20 +11,25 @@
 
 
   <!-- TEMPLATES -->
-  <script class="new-list-template" id="list-template" type="text/x-handlebars-template">
+  <script class="list-template" type="text/x-handlebars-template">
+    <h1 class="header">{{name}}</h1>
+    
+  </script>
+
+  <script class="create-list-template"  type="text/x-handlebars-template">
     <h1 class="header">Welcome to Your To Do List</h1>
-    <div id="new-list-form-container">
-      <div id="new-list-form-container-content">
-        <h3 id="new-list-form-title">Create New List</h3>
-        <form id="new-list-form">
-          <input id="new-list-input" type="text" placeholder="Enter List Name" autocomplete="off"/>
-          <input id="new-list-submit" type="submit" />
+    <div id="create-list-form-container">
+      <div id="create-list-form-container-content">
+        <h3 id="create-list-form-title">Create New List</h3>
+        <form id="create-list-form">
+          <input id="create-list-input" type="text" placeholder="Enter List Name" autocomplete="off"/>
+          <input id="create-list-submit" type="submit" />
         </form>
       </div>
     </div>
   </script>
 
-  <script class="sidebar-template" id="sidebar-template" type="text/x-handlebars-template">
+  <script class="sidebar-template" type="text/x-handlebars-template">
       <div id="sidebar-title">
         <h1>TODO</h1>
       </div>
@@ -50,6 +55,7 @@
 <!--   <script src="views/TaskView.js"></script> -->
   <script src="views/CreateListView.js"></script>
   <script src="views/SideBarView.js"></script>
+  <script src="views/ListView.js"></script>
   <script src="views/MainView.js"></script>
   <script src="views/AppView.js"></script>
 
