@@ -7,7 +7,7 @@ var SideBarView = Backbone.View.extend({
   },
 
   events: {
-    'click .sidebar-list': 'showList',
+    'click .inactive': 'showList',
     'click #sidebar-new-list': 'showNewListForm'
   },
 

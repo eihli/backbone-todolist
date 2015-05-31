@@ -30,10 +30,13 @@ $(document).ready(function(){
       if( !!headerListID ) {
         $('.sidebar-list').each(function(){
           if( $(this).attr('list-id') === headerListID ) {
-            $(this).css('background-color', '#3d313b');
+            $(this).addClass('active');
+            $(this).removeClass('inactive');
           }
           else {
-            $(this).css('background-color', '#4D394B');
+            console.log("CHANGE");
+            $(this).addClass('inactive');
+            $(this).removeClass('active');
           }
         });
       }

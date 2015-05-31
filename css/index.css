@@ -76,6 +76,10 @@ button:hover
   cursor: pointer;
 }
 
+.active {
+  background-color: #3d313b;
+}
+
 #sidebar-new-list {
   padding-left: 15px;
   margin-top: 20px;
