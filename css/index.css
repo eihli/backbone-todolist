@@ -9,6 +9,7 @@ html, body{
   overflow-y: hidden;
   height: 100%;
   width: 100%;
+  cursor: default;
 }
 
 body {
@@ -89,7 +90,7 @@ body {
   height: 100%;
 }
 
-.list-name {
+.header {
   text-align: center;
   background-color: #4C9689;
   color: white;
@@ -134,11 +135,11 @@ body {
   font-size: 30px;
   color: #4C9689;
   text-align: center;
-
+  outline:0;
 }
 
 #new-list-input:focus {
-  outline: none;
+  outline:0;
 }
 
 #new-list-submit {
@@ -146,7 +147,7 @@ body {
   margin-top: 30px;
   width: 200px;
   height: 60px;
-  background-color: #48a0de;
+  background-color: #A9A9A9;
   color: white;
   font-size: 20px;
   border: none;
@@ -154,6 +155,5 @@ body {
 }
 
 #new-list-submit:hover {
-  cursor:pointer;
   outline: none;
 }

@@ -4,7 +4,7 @@ var MainView = Backbone.View.extend({
   initialize: function(){
     this.createListView = new CreateListView({model: this.model});
 
-    this.listenTo(this.createListView, 'newListAdded', this.test);
+    this.listenTo(this.createListView, 'newListAdded', this.showList);
 
     this.createListViewRender();
   },
@@ -15,9 +15,8 @@ var MainView = Backbone.View.extend({
     ]);
   },
 
-  test: function() {
-    console.log("WORKING!");
-    this.$el.empty();
+  showList: function() {
+    console.log("A");
   }
 
 });

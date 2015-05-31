@@ -3,7 +3,6 @@ var AppView = Backbone.View.extend({
 
   initialize: function(){
     this.sideBarView = new SideBarView({collection: this.model.get('lists')});
-    
     this.mainView = new MainView({model: this.model});
   },
 
