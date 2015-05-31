@@ -26,8 +26,6 @@ var SideBarView = Backbone.View.extend({
   showList: function(e) {
     var list = this.collection.find(function(model) { return model.get('cid') == $(e.target).attr('list-id'); });
     this.trigger('showList', list);
-
-
   }
 
 });
