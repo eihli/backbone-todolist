@@ -1,17 +1,25 @@
 var AppView = Backbone.View.extend({
-  tagName: "body",
+  el: "body",
 
   initialize: function(){
-    this.sideBarView = new SideBarView();
-    this.listView = new ListView();
+    this.sideBarView = new SideBarView({collection: this.model.get('lists')});
+    
+    this.mainView = new MainView({model: this.model});
   },
 
+  // events: {
+  //   'click': 'testing'
+  // },
+
   render: function() {
-    return this.$el.html([
+    this.$el.html([
       this.sideBarView.$el,
-      this.listView.$el
+      this.mainView.$el
     ]);
-    
-  }
+  },
+
+  // testing: function(){
+  //   console.log("APPVIEW CLICK");
+  // }
 
 });

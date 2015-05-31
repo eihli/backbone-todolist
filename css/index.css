@@ -20,7 +20,7 @@ body {
 
 /*SIDE BAR*/
 
-#sidebar-container {
+.sidebar-container {
   background-color: #4D394B;
   color: #ab9ba9;
   position: fixed;
@@ -39,8 +39,8 @@ body {
   font-size: 30px;
   text-align: center;
   line-height: 50px;
-
 }
+
 
 #sidebar-list-header{
  padding-left: 15px;
@@ -76,10 +76,16 @@ body {
 
 
 /*MAIN LIST CONTENT*/
-#list-container {
+.main-container {
   background-color: #FFFFFF;
   margin-left: 200px;
   width: calc(100% - 200px);
+  height: 100%;
+}
+
+.list-container {
+  background-color: #FFFFFF;
+  width: 100%;
   height: 100%;
 }
 
@@ -149,4 +155,5 @@ body {
 
 #new-list-submit:hover {
   cursor:pointer;
+  outline: none;
 }

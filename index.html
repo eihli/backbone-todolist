@@ -8,19 +8,50 @@
   <script src="bower_components/backbone/backbone.js"></script>
   <script src="js/handlebars-v3.0.3.js"></script>
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+  <!-- OTHER JS -->
+  <script src="js/form-validation.js"></script>
+
+  <!-- TEMPLATES -->
+  <script class="new-list-template" id="list-template" type="text/x-handlebars-template">
+    <h1 class="list-name">Welcome to Your To Do List</h1>
+    <div id="new-list-form-container">
+      <div id="new-list-form-container-content">
+        <h3 id="new-list-form-title">Create New List</h3>
+        <form id="new-list-form">
+          <input id="new-list-input" type="text" placeholder="Enter List Name" autocomplete="off"/>
+          <input id="new-list-submit" type="submit" />
+        </form>
+      </div>
+    </div>
+  </script>
+
+  <script class="sidebar-template" id="sidebar-template" type="text/x-handlebars-template">
+      <div id="sidebar-title">
+        <h1>TODO</h1>
+      </div>
+      <div id="sidebar-list-container">
+        <p id="sidebar-list-header">LISTS</p>
+        {{#each this}}
+        <p class="sidebar-list">{{name}}</p>
+        {{/each}}
+      </div>
+      <p id="sidebar-new-list">NEW LIST</p>
+  </script>
 
   <!-- MODELS -->
   <script src="models/Task.js"></script>
   <script src="models/List.js"></script>
-  <script src=" models/App.js"></script>
+  <script src="models/App.js"></script>
 
   <!-- COLLECTIONS -->
   <script src="collections/AppLists.js"></script>
+  <script src="collections/TaskList.js"></script>
 
   <!-- VIEWS -->
 <!--   <script src="views/TaskView.js"></script> -->
-  <script src="views/ListView.js"></script>
+  <script src="views/CreateListView.js"></script>
   <script src="views/SideBarView.js"></script>
+  <script src="views/MainView.js"></script>
   <script src="views/AppView.js"></script>
 
   <script>
@@ -35,35 +66,6 @@
 
 </body>
 
-<!-- TEMPLATES -->
-<script id="list-template" type="text/x-handlebars-template">
-<div id="list-container">
-  <h1 class="list-name">Welcome to Your To Do List</h1>
-  <div id="new-list-form-container">
-    <div id="new-list-form-container-content">
-      <h3 id="new-list-form-title">Create New List</h3>
-      <form id="new-list-form">
-        <input id="new-list-input" type="text" placeholder="New List"/>
-        <input id="new-list-submit" type="submit" />
-      </form>
-    </div>
-  </div>
-</div>
-</script>
 
 
-<script id="sidebar-template" type="text/x-handlebars-template">
-  <div id="sidebar-container">
-    <div id="sidebar-title">
-      <h1>TODO</h1>
-    </div>
-    <div id="sidebar-list-container">
-      <p id="sidebar-list-header">LISTS</p>
-      <p class="sidebar-list">Homework</p>
-      <p class="sidebar-list">Other</p>
-      <p class="sidebar-list">Something Else</p>
-    </div>
-    <p id="sidebar-new-list">NEW LIST</p>
-  </div>
-</script>
 </html>
