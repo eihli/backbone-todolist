@@ -5,6 +5,7 @@ var List = Backbone.Model.extend({
 
   initialize: function() {
     this.set('tasks', new TaskList());
+    this.set('cid', this.cid);
   },
 
   add: function(task) {

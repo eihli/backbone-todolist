@@ -3,6 +3,7 @@ var MainView = Backbone.View.extend({
 
   initialize: function(){
     this.listenTo(this, 'showNewListForm', this.createListViewRender);
+    this.listenTo(this, 'showList', this.showList);
 
     this.createListViewRender();
   },
@@ -14,7 +15,13 @@ var MainView = Backbone.View.extend({
   },
 
   showList: function(e) {
-    this.createListView.remove();
+    //When you add a new view, remove whatever view was previously there
+    if( this.createListView !== undefined) {
+      this.createListView.remove();
+    }
+    else if( this.listView !== undefined) {
+      this.listView.remove();
+    }
     this.listView = new ListView({model: e});
     this.$el.html(this.listView.$el);
   },

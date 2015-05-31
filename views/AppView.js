@@ -6,6 +6,7 @@ var AppView = Backbone.View.extend({
     this.mainView = new MainView({model: this.model});
 
     this.listenTo(this.sideBarView , 'showNewListForm', this.showNewListForm);
+    this.listenTo(this.sideBarView , 'showList', this.showList);
 
 
   },
@@ -21,8 +22,13 @@ var AppView = Backbone.View.extend({
     ]);
   },
 
-  showNewListForm: function(){
+  showNewListForm: function() {
     this.mainView.trigger('showNewListForm', this);
+  },
+
+  showList: function(e) {
+    
+    this.mainView.trigger('showList', e);
   }
 
 });

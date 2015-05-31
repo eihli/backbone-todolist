@@ -7,7 +7,7 @@ var SideBarView = Backbone.View.extend({
   },
 
   events: {
-    // 'click .sidebar-list': 'sideTest',
+    'click .sidebar-list': 'showList',
     'click #sidebar-new-list': 'showNewListForm'
   },
 
@@ -21,6 +21,13 @@ var SideBarView = Backbone.View.extend({
 
   showNewListForm: function() {
     this.trigger('showNewListForm', this);
+  },
+
+  showList: function(e) {
+    var list = this.collection.find(function(model) { return model.get('cid') == $(e.target).attr('list-id'); });
+    this.trigger('showList', list);
+
+
   }
 
 });

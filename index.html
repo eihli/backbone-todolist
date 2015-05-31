@@ -12,12 +12,11 @@
 
   <!-- TEMPLATES -->
   <script class="list-template" type="text/x-handlebars-template">
-    <h1 class="header">{{name}}</h1>
-    
+    <h1 class="header" list-id="{{cid}}">{{name}}</h1>
   </script>
 
   <script class="create-list-template"  type="text/x-handlebars-template">
-    <h1 class="header">Welcome to Your To Do List</h1>
+    <h1 class="header">To Do List</h1>
     <div id="create-list-form-container">
       <div id="create-list-form-container-content">
         <h3 id="create-list-form-title">Create New List</h3>
@@ -36,10 +35,10 @@
       <div id="sidebar-list-container">
         <p id="sidebar-list-header">LISTS</p>
         {{#each this}}
-        <p class="sidebar-list">{{name}}</p>
+        <p class="sidebar-list" list-id="{{cid}}">{{name}}</p>
         {{/each}}
       </div>
-      <p id="sidebar-new-list">NEW LIST</p>
+      <p id="sidebar-new-list">CREATE NEW LIST</p>
   </script>
 
   <!-- MODELS -->
@@ -71,7 +70,7 @@
 </head>
 <body>
 
-<script src="js/form-validation.js"></script>
+<script src="js/javascript-styling.js"></script>
 </body>
 
 

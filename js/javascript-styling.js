@@ -23,6 +23,24 @@ $(document).ready(function(){
     }
   });
 
+  // HIGHLIGHTS ACTIVE SIDEBAR TAB
+  $(document).on("mouseup", "body", function(e){
+    setTimeout(function(){
+      var headerListID = $('.header').attr('list-id');
+      if( !!headerListID ) {
+        $('.sidebar-list').each(function(){
+          if( $(this).attr('list-id') === headerListID ) {
+            $(this).css('background-color', '#3d313b');
+          }
+          else {
+            $(this).css('background-color', '#4D394B');
+          }
+        });
+      }
+    }, 1);
+    
+  });
+
 
 
 
