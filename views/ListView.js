@@ -7,7 +7,6 @@ var ListView = Backbone.View.extend({
     this.listTasksView = new ListTasksView({collection: this.model.get('tasks')});
     this.listenTo(this.model.get('tasks'), 'add', this.test);
     this.render();
-    console.log(this.model.get('tasks'));
   },
 
   events: {
@@ -34,7 +33,4 @@ var ListView = Backbone.View.extend({
   test: function() {
     
   }
-
-  
-
 });

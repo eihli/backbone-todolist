@@ -1,1 +1,5 @@
-- Design for tasks
+-Design for tasks
+-Edit task
+-Remove task
+-Edit List
+-Remove List

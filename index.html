@@ -12,7 +12,9 @@
 
   <!-- TEMPLATES -->
   <script class="task-template" type="text/x-handlebars-template">
-    <p class="task-text" class="{{cid}}">{{description}}</p>
+    <div class="task-container">
+      <p class="task-description" task-id="{{cid}}">{{description}}</p>
+    </div>
   </script>
 
   <script class="create-task-template" type="text/x-handlebars-template">

@@ -18,9 +18,11 @@ var CreateTaskView = Backbone.View.extend({
   addNewTask: function(e) {
     e.preventDefault();
     var newTaskDescription = $('#create-task-input').val();
-    var newTask = new Task ({description: newTaskDescription});
-    this.model.get('tasks').add(newTask);
-    this.trigger('taskAdded', this);    
+    if( !!newTaskDescription ){
+      var newTask = new Task ({description: newTaskDescription});
+      this.model.get('tasks').add(newTask);
+      this.trigger('taskAdded', this);    
+    }
   }
 
 });

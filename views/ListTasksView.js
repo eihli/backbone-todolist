@@ -11,12 +11,19 @@ var ListTasksView = Backbone.View.extend({
 
   render: function() {
     this.$el.empty();
-    var tasks = this.collection.toJSON();
-    for (var i=0; i < tasks.length; i ++) {
-      var html = "<p>" + tasks[i].description + "</p>";
-      this.$el.append(html);
-    }
-    // this.$el.html("HELO");
+    var task;
+    this.collection.each(function(task){
+      task = new TaskView({model: task});
+      this.$el.append(task.$el);
+    }.bind(this));
+
+
+
+    // for (var i=0; i < tasks.length; i ++) {
+    //   var html = "<p>" + tasks[i].description + "</p>";
+    //   this.$el.append(html);
+    // }
+
   },
 
   tasksRender: function() {
