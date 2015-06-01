@@ -2,27 +2,38 @@ var ListView = Backbone.View.extend({
   className: 'list-container',
 
   initialize: function(){
-    this.initialRender();
-    // this.taskFormRender();
+    this.listHeaderView = new ListHeaderView({model: this.model});
+    this.createTaskView = new CreateTaskView({model: this.model});
+    this.listTasksView = new ListTasksView({collection: this.model.get('tasks')});
+    console.log(this);
+    this.listenTo(this.model.get('tasks'), 'add', this.test);
+
+    this.render();
   },
 
   events: {
   },
 
-  initialRender: function() {
-    console.log(this.model);
-    context = this.model.toJSON();
-    var source = $('.list-template').html();
-    var template = Handlebars.compile(source);
-    this.$el.html(template(context));
+  render: function() {
+    this.$el.empty();
+    this.$el.html([
+      this.listHeaderView.$el,
+      this.createTaskView.$el,
+      this.listTasksView.$el
+    ]);
   },
 
-  // taskFormRender: function() {
-  //   this.createTaskForm = new CreateTaskView();
+  // tasksRender: function() {
+  //   if( this.listTasksView !== undefined ) {
+  //     this.listTasksView.remove();
+  //   }
+    
+  //   this.listenTo(this.listTasksView, 'taskAdded', this.render);
+  //   console.log("A");
   // },
 
-  tasksRender: function() {
-
+  test: function() {
+    
   }
 
   

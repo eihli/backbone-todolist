@@ -6,24 +6,21 @@ var CreateTaskView = Backbone.View.extend({
   },
 
   events: {
-    
+    'click #create-task-submit': 'addNewTask'
   },
 
   render: function() {
-    var source = $('.create-list-template').html();
+    var source = $('.create-task-template').html();
     var template = Handlebars.compile(source);
     this.$el.html(template());
   },
 
   addNewTask: function(e) {
-    // e.preventDefault();
-    // var newTaskName = $('#create-list-input').val();
-    // if (newListName.length > 0) {
-    //   var newList = new List({name: newListName});
-    //   this.model.get('lists').add(newList);
-    //   this.trigger('newListAdded', newList);
-    // }
-    
+    e.preventDefault();
+    var newTaskDescription = $('#create-task-input').val();
+    var newTask = new Task ({description: newTaskDescription});
+    this.model.get('tasks').add(newTask);
+    this.trigger('taskAdded', this);    
   }
 
 });

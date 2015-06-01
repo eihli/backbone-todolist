@@ -11,15 +11,11 @@
 
 
   <!-- TEMPLATES -->
- <!--  <script class="task-template" type="text/x-handlebars-template">
+  <script class="task-template" type="text/x-handlebars-template">
     <p class="task-text" class="{{cid}}">{{description}}</p>
+  </script>
 
-
-    <h1 class="header" list-id="{{cid}}">{{name}}</h1>
-  </script> -->
-
-  <script class="list-template" type="text/x-handlebars-template">
-    <h1 class="header" list-id="{{cid}}">{{name}}</h1>
+  <script class="create-task-template" type="text/x-handlebars-template">
     <div class="create-task-form-container">
       <form class="create-task-form">
         <div id="create-task-submit-button-container">
@@ -70,11 +66,13 @@
   <script src="collections/TaskList.js"></script>
 
   <!-- VIEWS -->
-<!--   <script src="views/TaskView.js"></script> -->
+  <script src="views/TaskView.js"></script>
+  <script src="views/ListTasksView.js"></script>
   <script src="views/CreateListView.js"></script>
   <script src="views/CreateTaskView.js"></script>
   <script src="views/SideBarView.js"></script>
   <script src="views/ListView.js"></script>
+  <script src="views/ListHeaderView.js"></script>
   <script src="views/MainView.js"></script>
   <script src="views/AppView.js"></script>
 
