@@ -9,6 +9,7 @@ var ListHeaderView = Backbone.View.extend({
 
   render: function() {
     this.$el.html(this.model.get('name'));
+    this.$el.attr('list-id', this.model.get('cid'));
   },
 
 });
