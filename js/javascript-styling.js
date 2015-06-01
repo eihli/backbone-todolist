@@ -27,19 +27,14 @@ $(document).ready(function(){
   // HIGHLIGHTS ACTIVE SIDEBAR TAB
   $(document).on("mouseup", "body", function(){
     setTimeout(function(){
-      console.log("A");
       var headerListID = $('.header').attr('list-id');
-      console.log(headerListID = $('.header').attr('list-id'));
       if( !!headerListID ) {
-        console.log("B");
         $('.sidebar-list').each(function(){
-
           if( $(this).attr('list-id') === headerListID ) {
             $(this).addClass('active');
             $(this).removeClass('inactive');
           }
           else {
-            console.log("CHANGE");
             $(this).addClass('inactive');
             $(this).removeClass('active');
           }
