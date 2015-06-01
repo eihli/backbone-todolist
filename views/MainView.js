@@ -19,6 +19,8 @@ var MainView = Backbone.View.extend({
     this.removeOldViews();
     this.listView = new ListView({model: e});
     this.$el.html(this.listView.$el);
+    console.log(this.$el);
+
   },
 
   removeOldViews: function() {

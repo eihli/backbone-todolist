@@ -17,9 +17,19 @@
 
     <h1 class="header" list-id="{{cid}}">{{name}}</h1>
   </script> -->
+
   <script class="list-template" type="text/x-handlebars-template">
     <h1 class="header" list-id="{{cid}}">{{name}}</h1>
-    <div class="new-task-form-container"><div>
+    <div class="create-task-form-container">
+      <form class="create-task-form">
+        <div id="create-task-submit-button-container">
+          <input id="create-task-submit" type="submit" value="ADD"/>
+        </div>
+        <div id="create-task-input-container">
+          <input id="create-task-input" type="text" placeholder="Enter New Task" autocomplete="off"/>
+        </div>
+      </form>
+    <div>
   </script>
 
   <script class="create-list-template"  type="text/x-handlebars-template">
@@ -34,6 +44,8 @@
       </div>
     </div>
   </script>
+
+
 
   <script class="sidebar-template" type="text/x-handlebars-template">
       <div id="sidebar-title">
@@ -60,6 +72,7 @@
   <!-- VIEWS -->
 <!--   <script src="views/TaskView.js"></script> -->
   <script src="views/CreateListView.js"></script>
+  <script src="views/CreateTaskView.js"></script>
   <script src="views/SideBarView.js"></script>
   <script src="views/ListView.js"></script>
   <script src="views/MainView.js"></script>
