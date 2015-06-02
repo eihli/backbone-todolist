@@ -6,108 +6,21 @@
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/underscore/underscore.js"></script>
   <script src="bower_components/backbone/backbone.js"></script>
-  <script src="js/handlebars-v3.0.3.js"></script>
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 
-  <!-- TEMPLATES -->
-  <script class="task-template" type="text/x-handlebars-template">
-    <div class="task-container">
-    <div class="task-buttons">
-      <div class="task-button complete-task" task-id="{{cid}}">
-        <img class="task-button-img" src="img/checkmark-light.png" />
-      </div>
-    </div>
-    <div class="task-description-container">
-      <input class="task-description" type="text" task-id="{{cid}}" value="{{description}}"/>
-    </div>
-    </div>
-  </script>
-
-<!--   <script class="task-template" type="text/x-handlebars-template">
-    <div class="task-container">
-    <div class="task-buttons">
-      <div class="task-button complete-task"><img class="task-button-img" src="img/checkmark-light.png" /></div>
-    </div>
-    <div class="task-description-container">
-      <input class="task-description" type="text" ask-id="{{cid}}" value="{{description}}"/>
-    </div>
-    </div>
-  </script> -->
-
-  <script class="create-task-template" type="text/x-handlebars-template">
-    <div class="create-task-form-container">
-      <form class="create-task-form">
-        <div id="create-task-submit-button-container">
-          <input id="create-task-submit" type="submit" value="ADD"/>
-        </div>
-        <div id="create-task-input-container">
-          <input id="create-task-input" type="text" placeholder="Enter New Task" autocomplete="off"/>
-        </div>
-      </form>
-    <div>
-  </script>
-
-  <script class="create-list-template"  type="text/x-handlebars-template">
-    <h1 class="header">To Do List</h1>
-    <div id="create-list-form-container">
-      <div id="create-list-form-container-content">
-        <h3 id="create-list-form-title">Create New List</h3>
-        <form id="create-list-form">
-          <input id="create-list-input" type="text" placeholder="Enter List Name" autocomplete="off"/>
-          <input id="create-list-submit" type="submit" />
-        </form>
-      </div>
-    </div>
-  </script>
-
-
-
-  <script class="sidebar-template" type="text/x-handlebars-template">
-      <div id="sidebar-title">
-        <h1>TODO</h1>
-      </div>
-      <div id="sidebar-list-container">
-        <p id="sidebar-list-header">LISTS</p>
-        {{#each this}}
-        <p class="sidebar-list inactive" list-id="{{cid}}">{{name}}</p>
-        {{/each}}
-      </div>
-      <p id="sidebar-new-list">CREATE NEW LIST</p>
-  </script>
-
-  <!-- MODELS -->
-  <script src="models/Task.js"></script>
-  <script src="models/List.js"></script>
-  <script src="models/App.js"></script>
-
-  <!-- COLLECTIONS -->
-  <script src="collections/AppLists.js"></script>
-  <script src="collections/TaskList.js"></script>
-
-  <!-- VIEWS -->
-  <script src="views/TaskView.js"></script>
-  <script src="views/ListTasksView.js"></script>
-  <script src="views/CreateListView.js"></script>
-  <script src="views/CreateTaskView.js"></script>
-  <script src="views/SideBarView.js"></script>
-  <script src="views/ListView.js"></script>
-  <script src="views/ListHeaderView.js"></script>
-  <script src="views/MainView.js"></script>
-  <script src="views/AppView.js"></script>
-
-  <script>
-  $(document).ready(function() {
-    var appModel = new App();
-    var appView = new AppView({model: appModel});
-    $('body').append(appView.render());
-
-
-  });
-  </script>
 </head>
 <body>
+<h1 id="title">TO DO LIST</h1>
+<div id="form-div">
+  <h3 class="form-title">Login</h3>
+  <form id="log-in-form">
+    <input class="form-input" id="username" type="text" placeholder="Username" autocomplete="off"/>
+    <input class="form-input" id="password" type="text" placeholder="Password" autocomplete="off"/>
+    <input class="submit-button" id="log-in-submit" type="submit" />
+  </form>
+</div>
 
-<script src="js/javascript-styling.js"></script>
+
 </body>
 
 
