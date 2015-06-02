@@ -7,6 +7,8 @@ var TaskView = Backbone.View.extend({
   },
 
   events: {
+    'keyup' : 'edit',
+    'click .complete-task' : 'completeTask'
   },
 
   render: function() {
@@ -16,28 +18,24 @@ var TaskView = Backbone.View.extend({
     var template = Handlebars.compile(source);
     this.$el.html(template(context));
 
-
-
-
-
-    // this.$el.empty();
-    // this.$el.html([
-    //   this.listHeaderView.$el,
-    //   this.createTaskView.$el,
-    //   this.listTasksView.$el
-    // ]);
   },
 
-  // tasksRender: function() {
-  //   if( this.listTasksView !== undefined ) {
-  //     this.listTasksView.remove();
-  //   }
-    
-  //   this.listenTo(this.listTasksView, 'taskAdded', this.render);
-  //   console.log("A");
-  // },
+  edit: function(e) {
+    this.model.set('description', $(e.target).val());
+  },
 
-  test: function() {
+  completeTask: function(e){
+    // This accounts for the fact that e might register the div or the inner img
+    if( $(e.target).hasClass('task-button-img') ){
+      $(e.target).parent().parent().parent().slideUp(500);
+    }
+    else {
+      $(e.target).parent().parent().slideUp(500);
+    }
+
+    setTimeout(function(){
+      this.collection.remove(this.model);
+    }.bind(this), 500);
     
   }
 });

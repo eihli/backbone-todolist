@@ -25,7 +25,7 @@ $(document).ready(function(){
   });
 
   // HIGHLIGHTS ACTIVE SIDEBAR TAB
-  $(document).on("mouseup", "body", function(){
+  $(document).on("mouseup keydown", "body", function(){
     setTimeout(function(){
       var headerListID = $('.header').attr('list-id');
       if( !!headerListID ) {
@@ -57,7 +57,9 @@ $(document).ready(function(){
     $('#create-task-input').val("");
   });
 
-
+  $(document).on("click", ".sidebar-container", function(){
+    console.log("TEST");
+  });
 
 
 

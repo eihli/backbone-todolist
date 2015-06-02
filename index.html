@@ -9,13 +9,30 @@
   <script src="js/handlebars-v3.0.3.js"></script>
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 
-
   <!-- TEMPLATES -->
   <script class="task-template" type="text/x-handlebars-template">
     <div class="task-container">
-      <p class="task-description" task-id="{{cid}}">{{description}}</p>
+    <div class="task-buttons">
+      <div class="task-button complete-task" task-id="{{cid}}">
+        <img class="task-button-img" src="img/checkmark-light.png" />
+      </div>
+    </div>
+    <div class="task-description-container">
+      <input class="task-description" type="text" task-id="{{cid}}" value="{{description}}"/>
+    </div>
     </div>
   </script>
+
+<!--   <script class="task-template" type="text/x-handlebars-template">
+    <div class="task-container">
+    <div class="task-buttons">
+      <div class="task-button complete-task"><img class="task-button-img" src="img/checkmark-light.png" /></div>
+    </div>
+    <div class="task-description-container">
+      <input class="task-description" type="text" ask-id="{{cid}}" value="{{description}}"/>
+    </div>
+    </div>
+  </script> -->
 
   <script class="create-task-template" type="text/x-handlebars-template">
     <div class="create-task-form-container">
