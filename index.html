@@ -7,17 +7,33 @@
   <script src="bower_components/underscore/underscore.js"></script>
   <script src="bower_components/backbone/backbone.js"></script>
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-
+  <script src="js/index.js"></script>
 </head>
 <body>
 <h1 id="title">TO DO LIST</h1>
-<div id="form-div">
-  <h3 class="form-title">Login</h3>
+<div class="form-div" id="sign-in-form-container">
+  <div id="form-div-top">
+    <h3 class="form-title">Sign In</h3>
+    <p id="form-error">asdsadaads</p>
+  </div>
   <form id="log-in-form">
     <input class="form-input" id="username" type="text" placeholder="Username" autocomplete="off"/>
     <input class="form-input" id="password" type="text" placeholder="Password" autocomplete="off"/>
     <input class="submit-button" id="log-in-submit" type="submit" />
   </form>
+  <p class="bottom-text">Don't have an account?  <span class="bottom-text-link sign-up">Sign Up!</span></p>
+</div>
+<div class="form-div" id="sign-up-form-container">
+  <div id="form-div-top">
+    <h3 class="form-title">Sign Up</h3>
+    <p id="form-error">asdsadaads</p>
+  </div>
+  <form id="log-in-form">
+    <input class="form-input" id="username" type="text" placeholder="Username" autocomplete="off"/>
+    <input class="form-input" id="password" type="text" placeholder="Password" autocomplete="off"/>
+    <input class="submit-button" id="log-in-submit" type="submit" />
+  </form>
+  <p class="bottom-text">Already have an account?  <span class="bottom-text-link sign-in">Sign In!</span></p>
 </div>
 
 

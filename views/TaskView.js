@@ -27,10 +27,10 @@ var TaskView = Backbone.View.extend({
   completeTask: function(e){
     // This accounts for the fact that e might register the div or the inner img
     if( $(e.target).hasClass('task-button-img') ){
-      $(e.target).parent().parent().parent().slideUp(500);
+      $(e.target).parent().parent().parent().slideUp(250);
     }
     else {
-      $(e.target).parent().parent().slideUp(500);
+      $(e.target).parent().parent().slideUp(250);
     }
 
     setTimeout(function(){
