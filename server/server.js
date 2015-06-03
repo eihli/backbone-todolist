@@ -1,14 +1,14 @@
 var express = require('express');
 var app = express();
 var mysql = require('mysql');
-// var sequelize =
+var sequelize = require('sequelize')
 // var connection = mysql.createConnection({
 //   host: '127.0.0.1',
 //   user: 'root',
 //   password: 'bstein33',
 //   database: 'mealenders_db'
-
 // });
+
 var connection = mysql.createConnection({
   host: '45.55.244.91',
   user: 'admin',
