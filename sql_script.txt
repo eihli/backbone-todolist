@@ -1,0 +1,19 @@
+CREATE TABLE Lists 
+( 
+  name CHAR(30) NOT NULL, 
+);
+
+CREATE TABLE Tasks 
+( 
+  description CHAR(200) NOT NULL, 
+  list_id INT,
+  FOREIGN KEY (list_id) REFERENCE Lists(id)
+
+);
+
+
+
+
+
+
+
