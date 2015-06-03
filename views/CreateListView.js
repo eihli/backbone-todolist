@@ -17,7 +17,7 @@ var CreateListView = Backbone.View.extend({
 
   addNewList: function(e) {
     e.preventDefault();
-    var newListName = $('#create-list-input').val();
+    var newListName = _.escape($('#create-list-input').val());
     if (newListName.length > 0) {
       var newList = new List({name: newListName});
       this.model.get('lists').add(newList);

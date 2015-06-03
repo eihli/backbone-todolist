@@ -21,7 +21,7 @@ var TaskView = Backbone.View.extend({
   },
 
   edit: function(e) {
-    this.model.set('description', $(e.target).val());
+    this.model.set('description', _.escape($(e.target).val()));
   },
 
   completeTask: function(e){

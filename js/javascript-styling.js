@@ -56,14 +56,4 @@ $(document).ready(function(){
   $(document).on("click", "#create-task-submit", function(){
     $('#create-task-input').val("");
   });
-
-  $(document).on("click", ".sidebar-container", function(){
-    console.log("TEST");
-  });
-
-
-
-
-
-
 });
