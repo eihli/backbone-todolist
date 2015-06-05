@@ -27,10 +27,11 @@ connection.end(function(err) {
 });
 
 
+app.use(express.static('../client', {index: 'app.html'}));
 
-app.get('/', function (req, res) {
-  res.send('Hello World!');
-});
+// app.get('/', function (req, res) {
+//   res.send('Hello World!');
+// });
 
 var server = app.listen(3000, '0.0.0.0', function () {
 
