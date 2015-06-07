@@ -20,6 +20,10 @@ app.use(parser.json());
 app.get('/', function (req, res) {
   res.send('Hello World!');
 });
+app.post('/ajax', function(req, res) {
+  console.log(req.body);
+  res.sendStatus(201);
+});
 
 var server = app.listen(3000, function () {
 
