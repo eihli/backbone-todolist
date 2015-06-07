@@ -23,6 +23,19 @@ var CreateListView = Backbone.View.extend({
       this.model.get('lists').add(newList);
       this.trigger('newListAdded', newList);
     }
+
+    $.ajax({
+      url: "127.0.0.1",
+      type: 'GET',
+      content: JSON.stingify({listName: "Test Request"}),
+      contentType: 'application/json',
+      success: function(data) {
+        console.log("SUCCESS");
+      },
+      error: function(xhr, textStatus, error) {
+        console.log(textStatus);
+      }
+    });
     
   }
 

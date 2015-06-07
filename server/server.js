@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 var mysql = require('mysql');
-var sequelize = require('sequelize')
+var sequelize = require('sequelize');
 // var connection = mysql.createConnection({
 //   host: '127.0.0.1',
 //   user: 'root',
