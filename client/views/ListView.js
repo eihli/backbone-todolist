@@ -21,15 +21,6 @@ var ListView = Backbone.View.extend({
     ]);
   },
 
-  // tasksRender: function() {
-  //   if( this.listTasksView !== undefined ) {
-  //     this.listTasksView.remove();
-  //   }
-    
-  //   this.listenTo(this.listTasksView, 'taskAdded', this.render);
-  //   console.log("A");
-  // },
-
   test: function() {
     console.log(this.model.toJSON());
   }

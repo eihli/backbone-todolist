@@ -13,6 +13,10 @@
   - Add comments to tasks
   - Share lists
 
+6. Fixes
+  - Handle quotations
+  - Handle long task name
+
 
 
 
